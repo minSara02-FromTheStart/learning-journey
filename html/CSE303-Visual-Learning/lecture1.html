@@ -6,8 +6,10 @@
 
     <link rel="stylesheet" href="style1.css">
 </head>
+
 <script>
-function showExample(type) {
+function showExample(type) 
+{
 
     const box = document.getElementById("example-box");
     const title = document.getElementById("example-title");
@@ -15,38 +17,40 @@ function showExample(type) {
 
     box.classList.remove("hidden");
 
-    if (type === "nominal") {
+    if (type === "nominal") 
+    {
         title.innerText = "Nominal Variables";
         text.innerText = "Examples: Gender (Male/Female), Blood Group (A, B, AB, O), Country names.";
     }
 
-    else if (type === "ordinal") {
+    else if (type === "ordinal") 
+    {
         title.innerText = "Ordinal Variables";
         text.innerText = "Examples: Education level (School < College < University), Ratings (1⭐ to 5⭐), Class position.";
     }
 
-    else if (type === "categorical") {
+    else if (type === "categorical") 
+    {
         title.innerText = "Categorical Variables";
         text.innerText = "Examples: Color (Red, Blue), Brand names, Types of cars.";
     }
 
-    else if (type === "quantitative") {
+    else if (type === "quantitative") 
+    {
         title.innerText = "Quantitative Variables";
         text.innerText = "Examples: Age, Salary, Height, Temperature.";
     }
 }
 </script>
+
 <body>
     <div class="navbar">
 
-        <h2>CSE303 Visual Learning</h2>
+        <a href="list.html">List of Lectures</a>
 
         <a href="index.html">Home</a>
 
     </div>
-
-
-    <!-- HERO SECTION -->
 
     <section class="hero">
 
@@ -259,38 +263,36 @@ function showExample(type) {
 
     <section class="card">
 
-        <h2>Mean vs Median</h2>
+    <h2>Mean vs Median</h2>
 
-        <div class="numbers">
+    <p>
+        Imagine these student marks:
+    </p>
 
-            <span>10</span>
-            <span>12</span>
-            <span>13</span>
-            <span>15</span>
-            <span class="outlier">100</span>
+    <div class="numbers" id="numberBox">
+        70, 75, 80, 85, 90
+    </div>
 
-        </div>
+    <button onclick="showNormal()">
+        Normal Data
+    </button>
 
-        <div class="explanation">
+    <button onclick="showOutlier()">
+        Add Outlier
+    </button>
 
-            <div class="mean-box">
-                <h3>Mean = 30</h3>
-                <p>
-                    Outlier affects the mean heavily.
-                </p>
-            </div>
+    <div class="result">
+        <p id="meanText"></p>
+        <p id="medianText"></p>
+    </div>
 
-            <div class="median-box">
-                <h3>Median = 13</h3>
-                <p>
-                    Median stays stable even with outliers.
-                </p>
-            </div>
+    <p id="explanation"></p>
 
-        </div>
+    <script src="script.js"></script>
 
-    </section>
+    
 
+</section>
 
     <!-- POPULATION VS SAMPLE -->
 

@@ -20,8 +20,8 @@ p {
     font-size: 20px;
 }
 .start-btn {
-    background-color: rgb(2, 2, 248);
-    color: rgb(240, 240, 243);
+    background-color: rgb(232, 232, 242);
+    color: rgb(0, 0, 19);
 
     border: none;
 
@@ -32,20 +32,4 @@ p {
     border-radius: 10px;
 
     cursor: pointer;
-}
-#themeButton {
-    position: absolute;
-
-    top: 20px;
-    right: 20px;
-
-    padding: 10px 20px;
-
-    cursor: pointer;
-}
-
-
-.dark-mode {
-    background-color: #121212;
-    color: rgb(249, 246, 246);
 }

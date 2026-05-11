@@ -6,7 +6,36 @@
 
     <link rel="stylesheet" href="style1.css">
 </head>
+<script>
+function showExample(type) {
 
+    const box = document.getElementById("example-box");
+    const title = document.getElementById("example-title");
+    const text = document.getElementById("example-text");
+
+    box.classList.remove("hidden");
+
+    if (type === "nominal") {
+        title.innerText = "Nominal Variables";
+        text.innerText = "Examples: Gender (Male/Female), Blood Group (A, B, AB, O), Country names.";
+    }
+
+    else if (type === "ordinal") {
+        title.innerText = "Ordinal Variables";
+        text.innerText = "Examples: Education level (School < College < University), Ratings (1⭐ to 5⭐), Class position.";
+    }
+
+    else if (type === "categorical") {
+        title.innerText = "Categorical Variables";
+        text.innerText = "Examples: Color (Red, Blue), Brand names, Types of cars.";
+    }
+
+    else if (type === "quantitative") {
+        title.innerText = "Quantitative Variables";
+        text.innerText = "Examples: Age, Salary, Height, Temperature.";
+    }
+}
+</script>
 <body>
     <div class="navbar">
 
@@ -30,9 +59,6 @@
         </p>
 
     </section>
-
-
-    <!-- WHAT IS DATA -->
 
     <section class="card">
 
@@ -82,8 +108,6 @@
     </section>
 
 
-    <!-- ROW VS COLUMN -->
-
 <section class="card">
 
     <h2>Rows vs Columns</h2>
@@ -124,17 +148,19 @@
 
 </table>
 
-<div class="info-box column-box">
-            <h3>🟥 Column</h3>
+<div class="Column-container">
+    <div class="info-box column-box">
+        <h3>🟥 Column</h3>
+        <p>
+            A column means ONE feature/attribute.
+        </p>
+        <p class="direction">
+            ⬇ Vertical
+        </p>
+    </div>
 
-            <p>
-                A column means ONE feature/attribute.
-            </p>
-
-            <p class="direction">
-                ⬇ Vertical
-            </p>
 </div>
+
 <table border="1">
 
     <tr>
@@ -172,7 +198,7 @@
 </table>
     </div>
 
-    <div class="row-column-container">
+    <div class="row-container">
 
         <div class="info-box row-box">
             <h3>🟩 Row</h3>
@@ -194,33 +220,39 @@
 
     <section class="card">
 
-        <h2>Types of Variables</h2>
+    <h2>Types of Variables</h2>
 
-        <div class="variable-grid">
+    <div class="variable-grid">
 
-            <div class="variable-card">
-                <h3>Age</h3>
-                <p>Numerical Variable</p>
-            </div>
-
-            <div class="variable-card">
-                <h3>Gender</h3>
-                <p>Categorical Variable</p>
-            </div>
-
-            <div class="variable-card">
-                <h3>Salary</h3>
-                <p>Continuous Variable</p>
-            </div>
-
-            <div class="variable-card">
-                <h3>Number of Courses</h3>
-                <p>Discrete Variable</p>
-            </div>
-
+        <div class="variable-card" onclick="showExample('nominal')">
+            <h3>Nominal</h3>
+            <p>Categories without order</p>
         </div>
 
-    </section>
+        <div class="variable-card" onclick="showExample('ordinal')">
+            <h3>Ordinal</h3>
+            <p>Categories with order</p>
+        </div>
+
+        <div class="variable-card" onclick="showExample('categorical')">
+            <h3>Categorical</h3>
+            <p>Labels or groups</p>
+        </div>
+
+        <div class="variable-card" onclick="showExample('quantitative')">
+            <h3>Quantitative</h3>
+            <p>Numeric values</p>
+        </div>
+
+    </div>
+
+    <!-- Dynamic Example Box -->
+    <div id="example-box" class="example-box hidden">
+        <h3 id="example-title"></h3>
+        <p id="example-text"></p>
+    </div>
+
+</section>
 
 
     <!-- MEAN VS MEDIAN -->

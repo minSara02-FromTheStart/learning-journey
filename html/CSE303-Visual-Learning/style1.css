@@ -318,3 +318,45 @@ tr:hover {
     margin-top: 30px;
 
 }
+.variable-card {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.variable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.example-box {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-left: 6px solid #4CAF50;
+
+    background: linear-gradient(135deg, #f0fff4, #e6fffa);
+    color: #1f2937;
+
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+    animation: fadeIn 0.35s ease;
+}
+
+.example-box h3 {
+    color: #065f46;
+    margin-bottom: 8px;
+}
+
+.example-box p {
+    color: #374151;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

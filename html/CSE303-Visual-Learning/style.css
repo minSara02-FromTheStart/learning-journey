@@ -19,10 +19,9 @@ h1 {
 p {
     font-size: 20px;
 }
-
 .start-btn {
-    background-color: blue;
-    color: white;
+    background-color: rgb(2, 2, 248);
+    color: rgb(240, 240, 243);
 
     border: none;
 
@@ -34,9 +33,6 @@ p {
 
     cursor: pointer;
 }
-
-/* THEME BUTTON */
-
 #themeButton {
     position: absolute;
 
@@ -48,9 +44,8 @@ p {
     cursor: pointer;
 }
 
-/* DARK MODE */
 
 .dark-mode {
     background-color: #121212;
-    color: white;
+    color: rgb(249, 246, 246);
 }

@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #111827;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: #1f2937;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero h2 {
+    color: #f8f9fa00;
+}
+
+/* CARD */
+
+.card {
+    background-color: #1f2937;
+
+    margin: 40px auto;
+
+    width: 80%;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+.highlight-row td 
+{
+  border: 2px solid red;
+}
+th,
+td {
+    border: 1px solid white;
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #374151;
+}
+
+/* ROW COLUMN */
+
+.row-column-container {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+.info-box {
+    flex: 1;
+
+    background-color: #374151;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: 0.4s;
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+
+    background-color: #2563eb;
+}
+
+/* VARIABLE TYPES */
+
+.variable-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.variable-card {
+    background-color: #374151;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: 0.4s;
+}
+
+.variable-card:hover {
+    transform: rotate(-2deg) scale(1.03);
+
+    background-color: #2563eb;
+}
+
+/* MEAN VS MEDIAN */
+
+.numbers {
+    display: flex;
+
+    gap: 20px;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.numbers span {
+    background-color: #374151;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    font-size: 24px;
+
+    transition: 0.4s;
+}
+
+.numbers span:hover {
+    transform: translateY(-10px);
+}
+
+.outlier {
+    background-color: crimson !important;
+}
+
+.explanation {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+.mean-box,
+.median-box {
+    flex: 1;
+
+    background-color: #374151;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.mean-box:hover {
+    background-color: crimson;
+}
+
+.median-box:hover {
+    background-color: seagreen;
+}
+
+/* POPULATION */
+
+.population {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.dot {
+    width: 40px;
+
+    height: 40px;
+
+    background-color: gray;
+
+    border-radius: 50%;
+
+    animation: float 2s infinite alternate;
+}
+
+.sample {
+    background-color: #3b82f6;
+}
+
+@keyframes float {
+
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+.outlier {
+    background: red;
+    color: white;
+    animation: dropDown 2s ease;
+}
+
+@keyframes dropDown {
+
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mean-box {
+    border: 3px solid red;
+    animation: shake 2s infinite;
+}
+
+.median-box {
+    border: 3px solid #22c55e;
+}
+
+@keyframes shake {
+
+    0% { transform: translateX(0px); }
+
+    25% { transform: translateX(5px); }
+
+    50% { transform: translateX(-5px); }
+
+    75% { transform: translateX(5px); }
+
+    100% { transform: translateX(0px); }
+}
+
+.balance-line {
+    margin-top: 30px;
+    position: relative;
+    height: 60px;
+}
+
+.mean-indicator {
+    position: absolute;
+    right: 20%;
+    color: red;
+    font-weight: bold;
+    animation: moveRight 2s infinite;
+}
+
+.median-indicator {
+    position: absolute;
+    left: 40%;
+    color: green;
+    font-weight: bold;
+}
+
+@keyframes moveRight {
+
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+.population-text {
+    margin-top: 30px;
+
+}

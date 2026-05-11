@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lecture 1 - Introduction to Data Science</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="navbar">
+
+        <h2>CSE303 Visual Learning</h2>
+
+        <a href="index.html">Home</a>
+
+    </div>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>Lecture 1</h1>
+
+        <h2>Introduction to Data Science</h2>
+
+        <p>
+            Learn visually. Understand deeply.
+        </p>
+
+    </section>
+
+
+    <!-- WHAT IS DATA -->
+
+    <section class="card">
+
+        <h2>What is Data?</h2>
+
+        <p>
+            Data is raw information collected for analysis.
+        </p>
+
+        <div class="table-box">
+
+            <table>
+
+                <tr>
+                    <th>Student</th>
+                    <th>Age</th>
+                    <th>CGPA</th>
+                </tr>
+
+                <tr>
+                    <td>Fida</td>
+                    <td>22</td>
+                    <td>3.80</td>
+                </tr>
+
+                <tr>
+                    <td>Ali</td>
+                    <td>21</td>
+                    <td>3.45</td>
+                </tr>
+
+                <tr>
+                    <td>Rubab</td>
+                    <td>22</td>
+                    <td>3.80</td>
+                </tr>
+
+                <tr>
+                    <td>isha</td>
+                    <td>22</td>
+                    <td>3.80</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROW VS COLUMN -->
+
+<section class="card">
+
+    <h2>Rows vs Columns</h2>
+
+    <div class="table-visual">
+
+        <table border="1">
+
+    <tr>
+        <th style="border: 2px solid red;">Student</th>
+        <th>Age</th>
+        <th>CGPA</th>
+    </tr>
+
+    <tr>
+        <td style="border: 2px solid red;">Fida</td>
+        <td>22</td>
+        <td>3.80</td>
+    </tr>
+
+    <tr>
+        <td style="border: 2px solid red;">Ali</td>
+        <td>21</td>
+        <td>3.45</td>
+    </tr>
+
+    <tr>
+        <td style="border: 2px solid red;">Rubab</td>
+        <td>22</td>
+        <td>3.80</td>
+    </tr>
+
+    <tr>
+        <td style="border: 2px solid red;">isha</td>
+        <td>22</td>
+        <td>3.80</td>
+        </tr>
+
+</table>
+
+<div class="info-box column-box">
+            <h3>🟥 Column</h3>
+
+            <p>
+                A column means ONE feature/attribute.
+            </p>
+
+            <p class="direction">
+                ⬇ Vertical
+            </p>
+</div>
+<table border="1">
+
+    <tr>
+        <th>Student</th>
+        <th>Age</th>
+        <th>CGPA</th>
+    </tr>
+
+    <tr>
+        <td style="border: 2px solid rgb(29, 138, 45);">Fida</td>
+        <td style="border: 2px solid rgb(29, 138, 45);">22</td>
+        <td style="border: 2px solid rgb(29, 138, 45);">3.80</td>
+    </tr>
+
+    <tr>
+        <td>Ali</td>
+        <td>21</td>
+        <td>3.45</td>
+    </tr>
+
+    <tr>
+        <td>Rubab</td>
+        <td>22</td>
+        <td>3.80</td>
+    </tr>
+
+    <tr>
+        <td>isha</td>
+        <td>22</td>
+        <td>3.80</td>
+    </tr>
+</table>
+
+
+</table>
+    </div>
+
+    <div class="row-column-container">
+
+        <div class="info-box row-box">
+            <h3>🟩 Row</h3>
+
+            <p>
+                A row means ONE complete observation.
+            </p>
+
+            <p class="direction">
+                ➜ Horizontal
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- VARIABLE TYPES -->
+
+    <section class="card">
+
+        <h2>Types of Variables</h2>
+
+        <div class="variable-grid">
+
+            <div class="variable-card">
+                <h3>Age</h3>
+                <p>Numerical Variable</p>
+            </div>
+
+            <div class="variable-card">
+                <h3>Gender</h3>
+                <p>Categorical Variable</p>
+            </div>
+
+            <div class="variable-card">
+                <h3>Salary</h3>
+                <p>Continuous Variable</p>
+            </div>
+
+            <div class="variable-card">
+                <h3>Number of Courses</h3>
+                <p>Discrete Variable</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEAN VS MEDIAN -->
+
+    <section class="card">
+
+        <h2>Mean vs Median</h2>
+
+        <div class="numbers">
+
+            <span>10</span>
+            <span>12</span>
+            <span>13</span>
+            <span>15</span>
+            <span class="outlier">100</span>
+
+        </div>
+
+        <div class="explanation">
+
+            <div class="mean-box">
+                <h3>Mean = 30</h3>
+                <p>
+                    Outlier affects the mean heavily.
+                </p>
+            </div>
+
+            <div class="median-box">
+                <h3>Median = 13</h3>
+                <p>
+                    Median stays stable even with outliers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPULATION VS SAMPLE -->
+
+    <section class="card">
+
+        <h2>Population vs Sample</h2>
+
+        <div class="population">
+
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot sample"></div>
+            <div class="dot"></div>
+            <div class="dot sample"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot sample"></div>
+            <div class="dot"></div>
+
+        </div>
+
+        <div class="population-text">
+
+            <p>
+                Blue dots represent sample data selected
+                from the whole population.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

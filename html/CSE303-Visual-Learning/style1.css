@@ -86,8 +86,14 @@ tr:hover {
 }
 
 /* ROW COLUMN */
+.row-container {
+    display: flex;
 
-.row-column-container {
+    gap: 30px;
+
+    margin-top: 30px;
+}
+.column-container {
     display: flex;
 
     gap: 30px;
@@ -139,93 +145,6 @@ tr:hover {
     transform: rotate(-2deg) scale(1.03);
 
     background-color: #2563eb;
-}
-
-/* MEAN VS MEDIAN */
-
-.numbers {
-    display: flex;
-
-    gap: 20px;
-
-    justify-content: center;
-
-    margin-top: 30px;
-}
-
-.numbers span {
-    background-color: #374151;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-    font-size: 24px;
-
-    transition: 0.4s;
-}
-
-.numbers span:hover {
-    transform: translateY(-10px);
-}
-
-.outlier {
-    background-color: crimson !important;
-}
-
-.explanation {
-    display: flex;
-
-    gap: 30px;
-
-    margin-top: 40px;
-}
-
-.mean-box,
-.median-box {
-    flex: 1;
-
-    background-color: #374151;
-
-    padding: 30px;
-
-    border-radius: 15px;
-}
-
-.mean-box:hover {
-    background-color: crimson;
-}
-
-.median-box:hover {
-    background-color: seagreen;
-}
-
-/* POPULATION */
-
-.population {
-    display: flex;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-    margin-top: 30px;
-}
-
-.dot {
-    width: 40px;
-
-    height: 40px;
-
-    background-color: gray;
-
-    border-radius: 50%;
-
-    animation: float 2s infinite alternate;
-}
-
-.sample {
-    background-color: #3b82f6;
 }
 
 @keyframes float {

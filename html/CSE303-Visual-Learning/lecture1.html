@@ -259,5 +259,354 @@ function showExample(type)
 </section>
     <!-- Mean & Median -->
 
+<div class="container">
+
+    <h1>Mean vs Median vs Mode</h1>
+    <p class="subtitle">
+      Understand statistics visually with animations and skewed graphs
+    </p>
+
+    <!-- MEAN -->
+
+    <section>
+
+      <h2>1. Mean (Average)</h2>
+
+      <p>
+        Mean is the average value.
+        We add all numbers and divide by total quantity.
+      </p>
+
+      <div class="formula">
+        Mean = (Sum of all values) / (Total number of values)
+      </div>
+
+      <div class="data-box">
+        Example: 10, 12, 13, 14, <span class="highlight">100</span>
+      </div>
+
+      <p style="margin-top:20px;">
+        Total = 149 <br>
+        Count = 5 <br><br>
+
+        Mean = 149 / 5 = <span class="highlight">29.8</span>
+      </p>
+
+      <div class="problem">
+        <h3>⚠ Problem with Mean</h3>
+
+        <p>
+          One extreme value (called an outlier) can pull the mean far away from the real center.
+          Here, most numbers are around 10-14, but because of 100,
+          the mean becomes 29.8 which is misleading.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- MEDIAN -->
+
+    <section>
+
+      <h2>2. Median</h2>
+
+      <p>
+        Median is the middle value after arranging numbers in order.
+      </p>
+
+      <div class="formula">
+        Median = Middle Number
+      </div>
+
+      <div class="data-box">
+        Example: 10, 12, 13, 14, 100
+      </div>
+
+      <p style="margin-top:20px;">
+        Middle value = <span class="highlight">13</span>
+      </p>
+
+      <div class="solution">
+        <h3>✅ Why Median is Better</h3>
+
+        <p>
+          Median ignores the effect of extreme outliers.
+          Even though 100 is very large, the median stays near the actual center.
+          That is why median is better for skewed data like salaries,
+          house prices, or income distribution.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- MODE -->
+
+    <section>
+
+      <h2>3. Mode</h2>
+
+      <p>
+        Mode is the value that appears most frequently.
+      </p>
+
+      <div class="formula">
+        Mode = Most Frequent Value
+      </div>
+
+      <div class="data-box">
+        Example: 2, 3, 3, 3, 5, 6
+      </div>
+
+      <p style="margin-top:20px;">
+        Mode = <span class="highlight">3</span>
+      </p>
+
+    </section>
+
+<!-- Replace ONLY the graph section with this improved version -->
+
+<div class="container">
+
+  <!-- NORMAL DISTRIBUTION -->
+
+  <div class="card">
+
+    <h2>Normal Distribution</h2>
+
+    <div class="graph">
+
+      <!-- curve -->
+      <svg viewBox="0 0 400 250" class="svg-graph">
+
+        <!-- axis -->
+        <line x1="20" y1="220" x2="380" y2="220" class="axis"/>
+        <line x1="20" y1="20" x2="20" y2="220" class="axis"/>
+
+        <!-- bell curve -->
+        <path 
+          d="M40 220 
+             C120 220, 120 40, 200 40
+             C280 40, 280 220, 360 220"
+          class="curve"/>
+
+        <!-- median -->
+        <line x1="200" y1="40" x2="200" y2="220" class="median-line"/>
+
+        <!-- mean -->
+        <line x1="200" y1="40" x2="200" y2="220" class="mean-line"/>
+
+        <text x="210" y="70" class="mean-text">
+          Mean = Median
+        </text>
+
+      </svg>
+
+    </div>
+
+    <p>
+      Perfectly balanced distribution.  
+      Both Mean and Median stay at the center.
+    </p>
+
+  </div>
+
+
+
+  <!-- RIGHT SKEWED -->
+
+  <div class="card">
+
+    <h2>Right Skewed Distribution</h2>
+
+    <div class="graph">
+
+      <svg viewBox="0 0 400 250" class="svg-graph">
+
+        <!-- axis -->
+        <line x1="20" y1="220" x2="380" y2="220" class="axis"/>
+        <line x1="20" y1="20" x2="20" y2="220" class="axis"/>
+
+        <!-- right skew curve -->
+        <path 
+          d="M40 220
+             C90 220, 110 50, 160 50
+             C220 50, 240 120, 280 170
+             C320 200, 340 210, 360 220"
+          class="curve"/>
+
+        <!-- median -->
+        <line x1="170" y1="50" x2="170" y2="220" class="median-line"/>
+
+        <!-- mean -->
+        <line x1="240" y1="90" x2="240" y2="220" class="mean-line"/>
+
+        <text x="145" y="40" class="median-text">
+          Median
+        </text>
+
+        <text x="225" y="80" class="mean-text">
+          Mean
+        </text>
+
+      </svg>
+
+    </div>
+
+    <p>
+      The long tail goes to the RIGHT.  
+      Large outliers pull the Mean toward the tail.
+    </p>
+
+  </div>
+
+
+
+  <!-- LEFT SKEWED -->
+
+  <div class="card">
+
+    <h2>Left Skewed Distribution</h2>
+
+    <div class="graph">
+
+      <svg viewBox="0 0 400 250" class="svg-graph">
+
+        <!-- axis -->
+        <line x1="20" y1="220" x2="380" y2="220" class="axis"/>
+        <line x1="20" y1="20" x2="20" y2="220" class="axis"/>
+
+        <!-- left skew curve -->
+        <path 
+          d="M40 220
+             C60 210, 80 200, 120 170
+             C160 120, 180 50, 240 50
+             C290 50, 310 220, 360 220"
+          class="curve"/>
+
+        <!-- mean -->
+        <line x1="150" y1="90" x2="150" y2="220" class="mean-line"/>
+
+        <!-- median -->
+        <line x1="220" y1="50" x2="220" y2="220" class="median-line"/>
+
+        <text x="120" y="80" class="mean-text">
+          Mean
+        </text>
+
+        <text x="205" y="40" class="median-text">
+          Median
+        </text>
+
+      </svg>
+
+    </div>
+
+    <p>
+      The long tail goes to the LEFT.  
+      Small outliers pull the Mean toward the tail.
+    </p>
+
+  </div>
+
+</div>
+<!-- COMPARISON -->
+<section>
+
+    <h2>5. Quick Comparison</h2>
+
+    <div class="comparison">
+        
+        <div class="card">
+            <h3>Mean</h3>
+            <p>Uses every value.<br><br>Best when data has no outliers.</p>
+        </div>
+
+        <div class="card">
+            <h3>Median</h3>
+            <p>Uses the middle value.<br><br>Best for skewed data and outliers.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mode</h3>
+            <p>Uses the most common value.<br><br>Useful for categories and popularity.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+    <h2>Population and Sample</h2>
+
+    <div class="main">
+
+        <!-- POPULATION -->
+        <div class="box">
+            <div class="title">Population</div>
+            <div class="subtitle">
+                Entire group of individuals or data
+            </div>
+
+            <div class="population">
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person selected move1"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person selected move2"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person selected move3"></div>
+                <div class="person"></div>
+
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person"></div>
+                <div class="person selected move4"></div>
+            </div>
+        </div>
+
+        <!-- MIDDLE -->
+        <div class="middle">
+            <div class="middle-text">Sampling Process</div>
+            <div class="middle-sub">
+                A smaller group is selected from the population for analysis
+            </div>
+            <div class="arrow">⟶</div>
+        </div>
+
+        <!-- SAMPLE -->
+        <div class="box">
+            <div class="title">Sample</div>
+            <div class="subtitle">
+                Selected individuals from the population
+            </div>
+
+            <div class="sample">
+                <div class="sample-person s1"></div>
+                <div class="sample-person s2"></div>
+                <div class="sample-person s3"></div>
+                <div class="sample-person s4"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 </body>
 </html>
